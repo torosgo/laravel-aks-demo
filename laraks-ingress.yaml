@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: laraks-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: laraks-svc-pri
+    servicePort: 80
+  rules:
+  - host: frontend.{{LARASVCPRIIP}}.nip.io
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: laraks-svc-pri
+          servicePort: 80
