@@ -2,7 +2,7 @@
 
 Learn how to deploy a Laravel (PHP) application to AKS with load balancer and scalibility features.
 
-## Installation
+## Installation Updates
 
 ### Create AKS Cluster
 
